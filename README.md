@@ -42,13 +42,13 @@ Good fonts: venturis2, bookman
 
 ## CITATIONS
 
-https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md
+[https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md](https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
 
-https://pandoc.org/demo/example19/Extension-citations.html
+[https://pandoc.org/demo/example19/Extension-citations.html](https://pandoc.org/demo/example19/Extension-citations.html)
 
 example parameter: 
 
---bibliography TestUnrealBib.bib
+`--bibliography TestUnrealBib.bib`
 
 Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command
 
@@ -78,8 +78,8 @@ It might be nice to create a default template that gets the latex to look as I w
 
 ## USEFUL LINKS
 
-[https://www.soimort.org/notes/161117/](https://www.soimort.org/notes/161117/)
+[Boilerplating Pandoc for Academic Writing](https://www.soimort.org/notes/161117/)
 
-[https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown](https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
+[Sustainable Authorship in Plain Text using Pandoc and Markdown](https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
 
-[http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html](http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html)
+[Markdown and Pandoc for academic writing](http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html)
