@@ -1,0 +1,4 @@
+% removes indentation from abstract (can just add noindent within abstract if using own template)
+\usepackage{etoolbox}
+\ifundef{\abstract}{}{\patchcmd{\abstract}
+    {\quotation}{\quotation\noindent\ignorespaces}{}{}}

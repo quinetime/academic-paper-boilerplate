@@ -71,6 +71,11 @@ nocite: |
 **F6** enables spellcheck in Sublime Text.
 
 
+## POTENTIAL EDITS TO MAKE IN LATEX FILE
+
+- Add `\noindent` to the inside of the abstract block, just before abstract content starts.
+
+
 ## TO INVESTIGATE
 
 It might be nice to create a default template that gets the latex to look as I want.
