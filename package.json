@@ -1,0 +1,10 @@
+{
+	"name": "Project-Name",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+	  "pdf": "pandoc header.md content.md footnotes.md nocite.md --filter pandoc-citeproc -o processed/paper.pdf --bibliography ../../../../Bib/DubBib.bib",
+	  "latex": "pandoc -s header.md content.md footnotes.md nocite.md --filter pandoc-citeproc -o processed/papertex.tex --bibliography ../../../../Bib/DubBib.bib --natbib",
+	  "word": "pandoc header.md content.md footnotes.md nocite.md --filter pandoc-citeproc -o processed/paper.docx --bibliography ../../../../Bib/DubBib.bib"
+	}
+}
