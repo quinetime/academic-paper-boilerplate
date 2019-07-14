@@ -8,10 +8,11 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - Rename project in package.json
 - Check that relative pathing for bibtex file is correct in package.json scripts
 - Edit metadata in header.md
+- *Optional:* run `git init` and `git add *`
 - Write paper in four content files (content, footnotes, header, nocite)
 - `npm run pdf` or `npm run latex` or `npm run word`
-- Optional: generate aux file by converting the tex file into a pdf.  In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
-- Optional: edit LaTeX directly
+- *Optional:* generate aux file by converting the tex file into a pdf.  In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
+- *Optional:* edit LaTeX directly
 
 
 ## COMMAND LINE
@@ -36,7 +37,9 @@ The first YAML chunk contains material the reader can see.  The second YAML chun
 
 LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/FontCatalogue/)
 
-Good fonts: venturis2, bookman
+[Curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/)
+
+Personal favorites: venturis2, bookman
 
 
 
@@ -58,6 +61,8 @@ Or, you can put the bibliography file data in the YAML header and remove the '--
 
 In the nocite file, add the following (replacing the citations as needed). This will include papers in the bibliography even if they are not cited in the text.  (One writing strategy is to start by populating this list early with probable citations, then move them into the content as needed.)
 
+Make sure to add an empty line before the following code.
+
 
 ```
 ---
@@ -71,14 +76,10 @@ nocite: |
 **F6** enables spellcheck in Sublime Text.
 
 
-## POTENTIAL EDITS TO MAKE IN LATEX FILE
-
-- Add `\noindent` to the inside of the abstract block, just before abstract content starts.
-
-
 ## TO INVESTIGATE
 
-It might be nice to create a default template that gets the latex to look as I want.
+- It might be nice to create a default template that gets the latex to look as I want.
+- Hanging indents in the bibliography section are very annoying to generate.  All the solutions I've seen require you to generate a References title in order to inject some LaTeX code afterward, instead of using the reference-section-title value in the YAML header.  See [here](https://dyrobooks.com/blog/2018/07/29/pandoc-and-hanging-indents/) and [here](https://tex.stackexchange.com/questions/477219/hanging-indents-with-a-pandoc-bibliography).
 
 
 ## USEFUL LINKS
@@ -88,3 +89,5 @@ It might be nice to create a default template that gets the latex to look as I w
 [Sustainable Authorship in Plain Text using Pandoc and Markdown](https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
 
 [Markdown and Pandoc for academic writing](http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html)
+
+[Plain Text, Papers, Pandoc](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
