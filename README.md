@@ -71,6 +71,12 @@ nocite: |
 ...
 ```
 
+## WORD COUNT
+
+- [SublimeText package](https://github.com/kevinstadler/SublimeLaTeXWordCount)
+- Use WinEDT (Document > Word Count)
+- [texcount](https://app.uio.no/ifi/texcount/index.html)
+
 ## SPELLCHECK REMINDER
 
 **F6** enables spellcheck in Sublime Text.
