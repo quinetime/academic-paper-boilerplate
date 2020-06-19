@@ -41,7 +41,7 @@ LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/Fo
 
 Personal favorites: venturis2, bookman
 
-
+To include LaTeX packages, see [this post](https://tex.stackexchange.com/questions/139139/adding-headers-and-footers-using-pandoc/139205#139205).  This allows the use of any font installed on one's computer; see [here](https://tex.stackexchange.com/questions/3101/how-can-i-get-latex-to-use-the-fonts-that-are-already-on-my-pc-via-xetex/3104#3104).
 
 ## CITATIONS
 
