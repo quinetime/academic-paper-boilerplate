@@ -107,3 +107,5 @@ header-includes:
 [Markdown and Pandoc for academic writing](http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html)
 
 [Plain Text, Papers, Pandoc](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
+
+[Simple Essay](https://github.com/plain-plain-text/simple-essay)
