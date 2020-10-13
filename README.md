@@ -81,6 +81,16 @@ nocite: |
 
 **F6** enables spellcheck in Sublime Text.
 
+## LINE NUMBERING
+
+Include in the header:
+
+```
+header-includes:
+  - \usepackage[left]{lineno}
+  - \linenumbers
+  ```
+
 
 ## TO INVESTIGATE
 
