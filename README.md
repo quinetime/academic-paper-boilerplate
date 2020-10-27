@@ -4,7 +4,7 @@ This is a template that I clone in order to begin writing academic papers.  It's
 
 ## WORKFLOW
 
-- Clone this directory with `git clone https://github.com/quinetime/academic-paper-boilerplate`
+- Clone this directory with `git clone https://github.com/quinetime/academic-paper-boilerplate directory_name`
 - Rename project in package.json
 - Check that relative pathing for bibtex file is correct in package.json scripts
 - Edit metadata in header.md
