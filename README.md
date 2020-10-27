@@ -8,12 +8,9 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - Rename project in package.json (spaces not allowed)
 - Check that relative pathing for bibtex file is correct in package.json scripts
 - Edit metadata in header.md
-- *Optional:* run `git init` and `git add *`
+- *Optional:* add `/processed` to .gitignore file
 - Write paper in four content files (content, footnotes, header, nocite)
 - `npm run pdf` or `npm run latex` or `npm run word` or `npm run pdf-font` (for a PDF with an arbitrary font)
-- *Optional:* generate aux file by converting the tex file into a pdf.  In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
-- *Optional:* edit LaTeX directly
-
 
 ## YAML FRONT MATTER
 
@@ -56,7 +53,7 @@ Make sure to add an empty line before the following code.
 ```
 ---
 nocite: |
-	@BillonJD; @RadovicFU
+	@BillonJD; @RadovicSDNE
 ...
 ```
 If no nocite references are added, you'll get a warning on creating your document, but it doesn't matter.
@@ -67,10 +64,17 @@ The file `bib-header.tex` fixes the formatting of the Works Cited section in PDF
 
 Because of this, a reference-section-title value in the YAML header cannot be used.  Instead, *Works Cited* is given as a section header in the `bib-header.tex` file.  Be aware of this when generating Word documents or other types.
 
+### CREATING A BIB FILE
+
+Once the paper is complete, create a tex file, then convert the tex file into a pdf using WinEDT or some other LaTeX processor.  This will create an aux file (which pandoc normally does not expose). 
+
+In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
 
 ## LINE NUMBERING
 
 Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
+
+
 
 
 ## TEXT EDITING REMINDERS
@@ -80,6 +84,9 @@ Comment out or uncomment the appropriate section of `tex-header.md` to disable o
 - [SublimeText package](https://github.com/kevinstadler/SublimeLaTeXWordCount)
 - Use WinEDT (Document > Word Count)
 - [texcount](https://app.uio.no/ifi/texcount/index.html)
+
+
+
 
 ### SPELLCHECK
 
