@@ -10,7 +10,7 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - Edit metadata in header.md
 - *Optional:* run `git init` and `git add *`
 - Write paper in four content files (content, footnotes, header, nocite)
-- `npm run pdf` or `npm run latex` or `npm run word`
+- `npm run pdf` or `npm run latex` or `npm run word` or `npm run pdf-font` (for a PDF with an arbitrary font)
 - *Optional:* generate aux file by converting the tex file into a pdf.  In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
 - *Optional:* edit LaTeX directly
 
@@ -29,19 +29,15 @@ How to make footnotes: [https://www.markdownguide.org/extended-syntax/#footnotes
 
 ## YAML FRONT MATTER
 
-The file `header.md` contains metadata and front matter in YAML format.  The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default.
-
-Other csl files can be downloaded here: [https://www.zotero.org/styles](https://www.zotero.org/styles)
+The file `header.md` contains metadata and front matter in YAML format.  
 
 The first YAML chunk contains material the reader can see.  The second YAML chunk contains matter pertaining to the bibliography.  The third YAML chunk contains formatting for the conversion into LaTeX.
 
-LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/FontCatalogue/)
+The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default. Other csl files can be downloaded here: [https://www.zotero.org/styles](https://www.zotero.org/styles)
 
-[Curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/)
+LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/FontCatalogue/). See also [curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/).  Personal favorites: venturis2, bookman
 
-Personal favorites: venturis2, bookman
-
-To include LaTeX packages, see [this post](https://tex.stackexchange.com/questions/139139/adding-headers-and-footers-using-pandoc/139205#139205).  This allows the use of any font installed on one's computer; see [here](https://tex.stackexchange.com/questions/3101/how-can-i-get-latex-to-use-the-fonts-that-are-already-on-my-pc-via-xetex/3104#3104) and [here](https://tex.stackexchange.com/questions/234786/how-to-set-a-font-family-with-pandoc).
+To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line.
 
 ## CITATIONS
 
@@ -51,10 +47,9 @@ To include LaTeX packages, see [this post](https://tex.stackexchange.com/questio
 
 example parameter: 
 
-`--bibliography TestUnrealBib.bib`
+`--bibliography TestBib.bib`
 
-Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command
-
+Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts
 
 
 ## NOCITE
@@ -83,20 +78,17 @@ nocite: |
 
 ## LINE NUMBERING
 
-Include in the header:
+Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
+  
+## WORKS CITED SECTION
 
-```
-header-includes:
-  - \usepackage[left]{lineno}
-  - \linenumbers
-  ```
+The file `bib-header.tex` fixes the formatting of the Works Cited section in PDFs.  
 
+Because of this, a reference-section-title value in the YAML header cannot be used.  Instead, *Works Cited* is given as a section header in the `bib-header.tex` file.  Be aware of this when generating Word documents or other types.
 
 ## TO INVESTIGATE
 
 - It might be nice to create a default template that gets the latex to look as I want.
-- Hanging indents in the bibliography section are very annoying to generate.  All the solutions I've seen require you to generate a References title in order to inject some LaTeX code afterward, instead of using the reference-section-title value in the YAML header.  See [here](https://dyrobooks.com/blog/2018/07/29/pandoc-and-hanging-indents/) and [here](https://tex.stackexchange.com/questions/477219/hanging-indents-with-a-pandoc-bibliography).
-
 
 ## USEFUL LINKS
 
