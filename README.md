@@ -8,6 +8,7 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - Rename project in package.json (spaces not allowed)
 - Check that relative pathing for bibtex file is correct in package.json scripts
 - Edit metadata in header.md
+- add `/processed` directory
 - *Optional:* add `/processed` to .gitignore file
 - Write paper in four content files (content, footnotes, header, nocite)
 - `npm run pdf` or `npm run latex` or `npm run word` or `npm run pdf-font` (for a PDF with an arbitrary font)
