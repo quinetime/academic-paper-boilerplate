@@ -15,13 +15,6 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - *Optional:* edit LaTeX directly
 
 
-## FOOTNOTES
-
-Footnotes go in the separate footnotes file.
-
-How to make footnotes: [https://www.markdownguide.org/extended-syntax/#footnotes](https://www.markdownguide.org/extended-syntax/#footnotes)
-
-
 ## YAML FRONT MATTER
 
 The file `header.md` contains metadata and front matter in YAML format.  
@@ -34,6 +27,13 @@ LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/Fo
 
 To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line.
 
+## FOOTNOTES
+
+Footnotes go in the separate footnotes file.
+
+How to make footnotes: [https://www.markdownguide.org/extended-syntax/#footnotes](https://www.markdownguide.org/extended-syntax/#footnotes)
+
+
 ## CITATIONS
 
 [https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md](https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
@@ -44,10 +44,9 @@ example parameter:
 
 `--bibliography TestBib.bib`
 
-Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts
+Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts.
 
-
-## NOCITE
+### NOCITE
 
 In the nocite file, add the following (replacing the citations as needed). This will include papers in the bibliography even if they are not cited in the text.  (One writing strategy is to start by populating this list early with probable citations, then move them into the content as needed.)
 
@@ -61,29 +60,38 @@ nocite: |
 ...
 ```
 
-## WORD COUNT
-
-- [SublimeText package](https://github.com/kevinstadler/SublimeLaTeXWordCount)
-- Use WinEDT (Document > Word Count)
-- [texcount](https://app.uio.no/ifi/texcount/index.html)
-
-## SPELLCHECK REMINDER
-
-**F6** enables spellcheck in Sublime Text.
-
-## LINE NUMBERING
-
-Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
-  
-## WORKS CITED SECTION
+### WORKS CITED SECTION
 
 The file `bib-header.tex` fixes the formatting of the Works Cited section in PDFs.  
 
 Because of this, a reference-section-title value in the YAML header cannot be used.  Instead, *Works Cited* is given as a section header in the `bib-header.tex` file.  Be aware of this when generating Word documents or other types.
 
+
+## LINE NUMBERING
+
+Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
+
+
+## TEXT EDITING REMINDERS
+
+### WORD COUNT
+
+- [SublimeText package](https://github.com/kevinstadler/SublimeLaTeXWordCount)
+- Use WinEDT (Document > Word Count)
+- [texcount](https://app.uio.no/ifi/texcount/index.html)
+
+### SPELLCHECK
+
+**F6** enables spellcheck in Sublime Text.
+
+
+
+
 ## TO INVESTIGATE
 
 - It might be nice to create a default template that gets the latex to look as I want.
+
+
 
 ## USEFUL LINKS
 
