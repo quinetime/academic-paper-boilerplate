@@ -41,7 +41,7 @@ LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/Fo
 
 Personal favorites: venturis2, bookman
 
-
+To include LaTeX packages, see [this post](https://tex.stackexchange.com/questions/139139/adding-headers-and-footers-using-pandoc/139205#139205).  This allows the use of any font installed on one's computer; see [here](https://tex.stackexchange.com/questions/3101/how-can-i-get-latex-to-use-the-fonts-that-are-already-on-my-pc-via-xetex/3104#3104) and [here](https://tex.stackexchange.com/questions/234786/how-to-set-a-font-family-with-pandoc).
 
 ## CITATIONS
 
@@ -81,6 +81,16 @@ nocite: |
 
 **F6** enables spellcheck in Sublime Text.
 
+## LINE NUMBERING
+
+Include in the header:
+
+```
+header-includes:
+  - \usepackage[left]{lineno}
+  - \linenumbers
+  ```
+
 
 ## TO INVESTIGATE
 
@@ -97,3 +107,5 @@ nocite: |
 [Markdown and Pandoc for academic writing](http://arthurcgusmao.com/academia/2018/01/27/markdown-pandoc.html)
 
 [Plain Text, Papers, Pandoc](https://kieranhealy.org/blog/archives/2014/01/23/plain-text/)
+
+[Simple Essay](https://github.com/plain-plain-text/simple-essay)
