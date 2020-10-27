@@ -7,8 +7,11 @@ abstract: Abstract
 csl: apa.csl
 
 documentclass: article
-fontsize: 12pt
 indent: true
-geometry: margin=1.25in
-fontfamily: venturis2
+fontsize: 12pt
+
+mainfont: Goudy Old Style
+
+header-includes:
+  - \usepackage{fontspec}
 ...

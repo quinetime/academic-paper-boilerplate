@@ -2,3 +2,7 @@
 \usepackage{etoolbox}
 \ifundef{\abstract}{}{\patchcmd{\abstract}
     {\quotation}{\quotation\noindent\ignorespaces}{}{}}
+
+% adds line numbering
+\usepackage[right]{lineno}
+\linenumbers
