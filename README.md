@@ -5,7 +5,7 @@ This is a template that I clone in order to begin writing academic papers.  It's
 ## WORKFLOW
 
 - Clone this directory with `git clone https://github.com/quinetime/academic-paper-boilerplate directory_name`
-- Rename project in package.json
+- Rename project in package.json (spaces not allowed)
 - Check that relative pathing for bibtex file is correct in package.json scripts
 - Edit metadata in header.md
 - *Optional:* run `git init` and `git add *`
@@ -59,6 +59,7 @@ nocite: |
 	@BillonJD; @RadovicFU
 ...
 ```
+If no nocite references are added, you'll get a warning on creating your document, but it doesn't matter.
 
 ### WORKS CITED SECTION
 
