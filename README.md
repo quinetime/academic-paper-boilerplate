@@ -15,11 +15,6 @@ This is a template that I clone in order to begin writing academic papers.  It's
 - *Optional:* edit LaTeX directly
 
 
-## COMMAND LINE
-
-`pandoc header.md content.md footnotes.md nocite.md --filter pandoc-citeproc -o processed/paper.pdf --bibliography ../../../../Bib/DubBib.bib`
-
-
 ## FOOTNOTES
 
 Footnotes go in the separate footnotes file.
