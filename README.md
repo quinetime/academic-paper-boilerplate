@@ -19,30 +19,26 @@ The file `header.md` contains metadata and front matter in YAML format.
 
 The first YAML chunk contains material the reader can see.  The second YAML chunk contains matter pertaining to the bibliography.  The third YAML chunk contains formatting for the conversion into LaTeX.
 
-The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default. Other csl files can be downloaded here: [https://www.zotero.org/styles](https://www.zotero.org/styles)
+The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default. Other csl files can be downloaded [here](https://www.zotero.org/styles).
 
-LaTeX fonts can be found here: [https://tug.dk/FontCatalogue/](https://tug.dk/FontCatalogue/). See also [curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/).  Personal favorites: venturis2, bookman
+LaTeX fonts can be found [here](https://tug.dk/FontCatalogue/). See also [curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/).  Personal favorites: venturis2, bookman
 
-To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line.
+To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line. Doing so will have pandoc use xelatex instead of pdflatex, which results in the loss of some microtypography.
 
 ## FOOTNOTES
 
 Footnotes go in the separate footnotes file.
 
-How to make footnotes: [https://www.markdownguide.org/extended-syntax/#footnotes](https://www.markdownguide.org/extended-syntax/#footnotes)
+[How to make footnotes](https://www.markdownguide.org/extended-syntax/#footnotes).
 
 
 ## CITATIONS
 
-[https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md](https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
+[Info about how to cite using pandoc-citeproc](https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md).
 
-[https://pandoc.org/demo/example19/Extension-citations.html](https://pandoc.org/demo/example19/Extension-citations.html)
+[More info from the main pandoc site](https://pandoc.org/demo/example19/Extension-citations.html).
 
-example parameter: 
-
-`--bibliography TestBib.bib`
-
-Or, you can put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts.
+The scripts that run pandoc include a parameter with reference to a bibtex file: e.g. `--bibliography TestBib.bib`. You can alternately put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts.
 
 ### NOCITE
 
@@ -76,8 +72,6 @@ In JabRef, under the Tools menu, use the aux file to generate a sublibrary consi
 Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
 
 
-
-
 ## TEXT EDITING REMINDERS
 
 ### WORD COUNT
@@ -92,7 +86,6 @@ Comment out or uncomment the appropriate section of `tex-header.md` to disable o
 ### SPELLCHECK
 
 **F6** enables spellcheck in Sublime Text.
-
 
 
 
