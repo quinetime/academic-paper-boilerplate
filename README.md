@@ -19,11 +19,9 @@ The file `header.md` contains metadata and front matter in YAML format.
 
 The first YAML chunk contains material the reader can see.  The second YAML chunk contains matter pertaining to the bibliography.  The third YAML chunk contains formatting for the conversion into LaTeX.
 
-The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default. Other csl files can be downloaded [here](https://www.zotero.org/styles).
+LaTeX fonts can be found [here](https://tug.dk/FontCatalogue/). See also [curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/).  Personal favorites: venturis2, bookman.  To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line. Doing so will have pandoc use xelatex instead of pdflatex, which results in the loss of some microtypography.
 
-LaTeX fonts can be found [here](https://tug.dk/FontCatalogue/). See also [curated LaTeX fonts, with descriptions](https://r2src.github.io/top10fonts/).  Personal favorites: venturis2, bookman
-
-To use arbitrary fonts installed on one's machine, edit the `headerfont.md` file instead of `header.md`, and use the command `npm run pdf-font` on the command line. Doing so will have pandoc use xelatex instead of pdflatex, which results in the loss of some microtypography.
+LaTeX packages can be added either to the header (using `header-includes:`) or to the `texheader.tex` file, but doing the former requires manually installing them first and you'll get an error if they aren't installed.  Adding them in `texheader.tex` should bring up a prompt if they aren't installed.
 
 ## FOOTNOTES
 
@@ -40,12 +38,13 @@ Footnotes go in the separate footnotes file.
 
 The scripts that run pandoc include a parameter with reference to a bibtex file: e.g. `--bibliography TestBib.bib`. You can alternately put the bibliography file data in the YAML header and remove the '--bibliography' parameter from the command scripts.
 
+The csl file contains information about how citations should be formatted.  A file for APA style is included; delete the csl index in the header to revert to the Chicago Style default. Other csl files can be downloaded [here](https://www.zotero.org/styles).
+
 ### NOCITE
 
 In the nocite file, add the following (replacing the citations as needed). This will include papers in the bibliography even if they are not cited in the text.  (One writing strategy is to start by populating this list early with probable citations, then move them into the content as needed.)
 
 Make sure to add an empty line before the following code.
-
 
 ```
 ---
@@ -67,9 +66,23 @@ Once the paper is complete, create a tex file, then convert the tex file into a 
 
 In JabRef, under the Tools menu, use the aux file to generate a sublibrary consisting of only the entries cited in the paper.
 
-## LINE NUMBERING
+## FORMATTING TIPS
+
+### LINE NUMBERING
 
 Comment out or uncomment the appropriate section of `tex-header.md` to disable or enable line numbering.
+
+### DOUBLESPACING
+
+Add `linestretch: 2` to header.
+
+### PAGE HEADINGS
+
+Add `pagestyle: headings` to header.
+
+### ENDNOTES INSTEAD OF FOOTNOTES
+
+Uncomment the appropriate section of `tex-header.md` and add the chunk specified within to `bib-header.tex`.
 
 
 ## TEXT EDITING REMINDERS
