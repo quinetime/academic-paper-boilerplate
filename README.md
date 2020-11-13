@@ -102,12 +102,6 @@ Uncomment the appropriate section of `tex-header.md` and add the chunk specified
 
 
 
-## TO INVESTIGATE
-
-- It might be nice to create a default template that gets the latex to look as I want.
-
-
-
 ## USEFUL LINKS
 
 [Boilerplating Pandoc for Academic Writing](https://www.soimort.org/notes/161117/)
