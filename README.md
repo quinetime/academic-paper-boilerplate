@@ -58,7 +58,7 @@ If no nocite references are added, you'll get a warning on creating your documen
 
 The file `bib-header.tex` fixes the formatting of the Works Cited section in PDFs.  
 
-Because of this, a reference-section-title value in the YAML header cannot be used.  Instead, *Works Cited* is given as a section header in the `bib-header.tex` file.  Be aware of this when generating Word documents or other types.
+Because of this, a reference-section-title value in the YAML header cannot be used.  Instead, *Works Cited* is given as a section header in the `bib-header.tex` file.
 
 ### CREATING A BIB FILE
 
