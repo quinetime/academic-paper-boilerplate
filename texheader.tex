@@ -1,4 +1,4 @@
-% removes indentation from abstract (can just add noindent within abstract if using own template)
+% removes indentation from abstract
 \usepackage{etoolbox}
 \ifundef{\abstract}{}{\patchcmd{\abstract}
     {\quotation}{\quotation\noindent\ignorespaces}{}{}}
@@ -6,6 +6,7 @@
 % adds line numbering
 \usepackage[right]{lineno}
 \linenumbers
+\setlength{\linenumbersep}{20pt} %moves numbers slightly further (default is 10pt)
 
 % adds endnotes (uncomment the two lines below then follow next directions)
 % \usepackage{endnotes}
